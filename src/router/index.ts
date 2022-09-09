@@ -8,7 +8,11 @@ Router.get("/", (request: Request, response: Response) => {
     email: "biliksuunsamuel@gmail.com",
     git: "BiliksuunSamuel",
     currentTime: moment().format("dd, DD/MM/YYYY h:m a"),
-    about: "Incident Reporting API",
+    about: "Incident Weather Reporting API",
+    routes: {
+      get: "api/reports/get",
+      post: "api/report/add",
+    },
   });
 });
 
