@@ -1,5 +1,7 @@
 # incident_reporting
 
+<hr>
+
 ## Requirements
 1.Nodejs >= v10.19
 2.npm >= 6.14.11
@@ -7,19 +9,22 @@
 4.locally installed postgresql or cloud instance
 5.internet access
 
-## Packages used
-1.Express for express server
-2.Cors for for resource security policy
-3.Winston for errors and loggings
-4.Jest for unit testing
-5. Node-fetch for external API request
-6. Moment for time and date formating
-7. Pq for postgresql database instance
-8. Sequelize for ORM
-9. Nodemon for recompile and auto reload
-10.Typescript for typescript syntax
-11. Dotenv for environment variable management
+<hr>
 
+## Packages used
+1.Express for express server <br>
+2.Cors for for resource security policy <br>
+3.Winston for errors and loggings <br>
+4.Jest for unit testing <br>
+5. Node-fetch for external API request <br>
+6. Moment for time and date formating <br>
+7. Pq for postgresql database instance <br>
+8. Sequelize for ORM <br>
+9. Nodemon for recompile and auto reload <br>
+10.Typescript for typescript syntax <br>
+11. Dotenv for environment variable management <br>
+
+<hr>
 
 ## How to run app
  1. Clone the repository by typing this command on terminal for macOS and Linux users or command prompt for windows user. <br>
@@ -36,8 +41,8 @@
 
 6. To run unit test, use. <br>
     `npm test`
-7. To build for deployment
-8. `npm run build`
+7. To build for deployment  <br>
+   `npm run build`
 
-    Thank you
+Thank you
 
