@@ -15,10 +15,12 @@ export async function HandleNewReport(req: Request, res: Response) {
       ...data,
       date: moment().format("DD/MM/YYYY"),
     };
-
-    const response = await AddIncidentReport(reportInfo);
-
-    res.send({ data: response, message: "Report Added Successfully" });
+    if (weatherInfo?.cod === 200) {
+      const response = await AddIncidentReport(reportInfo);
+      res.send({ data: response, message: "Report Added Successfully" });
+    } else {
+      res.status(404).send(`Error,${weatherInfo?.message}`);
+    }
   } catch (error) {
     res.status(404).send(error);
   }

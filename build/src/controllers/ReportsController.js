@@ -24,8 +24,13 @@ function HandleNewReport(req, res) {
             (0, utilities_1.ValidateReportInfo)(data);
             const weatherInfo = yield (0, EndpointServices_1.GetWeatherInfo)({ city: data.city });
             const reportInfo = Object.assign(Object.assign({ weather_report: weatherInfo }, data), { date: (0, moment_1.default)().format("DD/MM/YYYY") });
-            const response = yield (0, services_1.AddIncidentReport)(reportInfo);
-            res.send({ data: response, message: "Report Added Successfully" });
+            if ((weatherInfo === null || weatherInfo === void 0 ? void 0 : weatherInfo.cod) === 200) {
+                const response = yield (0, services_1.AddIncidentReport)(reportInfo);
+                res.send({ data: response, message: "Report Added Successfully" });
+            }
+            else {
+                res.status(404).send(`Error,${weatherInfo === null || weatherInfo === void 0 ? void 0 : weatherInfo.message}`);
+            }
         }
         catch (error) {
             res.status(404).send(error);
