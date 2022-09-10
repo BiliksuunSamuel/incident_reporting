@@ -8,5 +8,5 @@ export default {
   dbHost: process.env.dbHost || "",
   dbUser: process.env.dbUser || "",
   dbPassword: process.env.dbPassword || "",
-  apiKey: process.env.apiKey || "",
+  apiKey: process.env.apiKey || "afabb9625f429f674a168384a39b19b2",
 };
